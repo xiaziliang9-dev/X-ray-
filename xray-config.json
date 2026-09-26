@@ -1,0 +1,241 @@
+{
+  "schema": 1,
+  "version": 1,
+  "updatedAt": "2026-09-26",
+  "note": "首版：与扩展内置默认规则一致",
+  "rules": {
+    "highlightRules": [
+      {
+        "id": "h-default-1",
+        "enabled": true,
+        "name": "（di）特殊机型高亮拆机Xray",
+        "triggerTexts": [
+          "iPhone 14 Pro",
+          "iPhone 14 Pro Max",
+          "iPhone 15 Pro",
+          "iPhone 15 Pro Max",
+          "iPhone 16 Pro",
+          "iPhone 16 Pro Max",
+          "iPhone 17 Pro",
+          "iPhone 17 Pro Max"
+        ],
+        "targetTexts": [
+          "检测结果拆机-Xray"
+        ],
+        "bgColor": "#ffeb3b",
+        "textColor": "#d32f2f",
+        "bold": true
+      },
+      {
+        "id": "h-default-2",
+        "enabled": true,
+        "name": "（di）商家纰漏电池高亮",
+        "triggerTexts": [
+          "质检报告已选择"
+        ],
+        "targetTexts": [
+          "电池维修-Xray",
+          "电池-外挂小板/有飞线-Xray"
+        ],
+        "bgColor": "#f44910",
+        "textColor": "#000000",
+        "bold": true
+      },
+      {
+        "id": "h-default-3",
+        "enabled": true,
+        "name": "（di）14及以上系列后摄高亮",
+        "triggerTexts": [
+          "iPhone 14",
+          "iPhone 14 Pro",
+          "iPhone 14 Pro Max",
+          "iPhone 15",
+          "iPhone 15 Pro",
+          "iPhone 15 Pro Max",
+          "iPhone 16",
+          "iPhone 16 Pro",
+          "iPhone 16 Pro Max",
+          "iPhone 17",
+          "iPhone 17 Pro",
+          "iPhone 17 Pro Max"
+        ],
+        "targetTexts": [
+          "后摄像头-有焊接/锡焊异常-Xray"
+        ],
+        "bgColor": "#8af41f",
+        "textColor": "#d32f2f",
+        "bold": true
+      }
+    ],
+    "disableRules": [
+      {
+        "id": "d-default-1",
+        "enabled": true,
+        "name": "（di）非特殊机型禁用拆机Xray",
+        "triggerTexts": [
+          "iPhone 14 Pro",
+          "iPhone 14 Pro Max",
+          "iPhone 15 Pro",
+          "iPhone 15 Pro Max",
+          "iPhone 16 Pro",
+          "iPhone 16 Pro Max",
+          "iPhone 17 Pro",
+          "iPhone 17 Pro Max"
+        ],
+        "targetTexts": [
+          "检测结果拆机-Xray"
+        ],
+        "disableMode": "notTriggered"
+      },
+      {
+        "id": "d-default-2",
+        "enabled": true,
+        "name": "（di）苹果禁用屏幕其他样式特征",
+        "triggerTexts": [
+          "iPhone "
+        ],
+        "targetTexts": [
+          "屏幕-其他维修特征-Xray"
+        ],
+        "disableMode": "triggered"
+      }
+    ],
+    "checkRules": [
+      {
+        "id": "c-default-1",
+        "enabled": true,
+        "name": "（di）问题项与检测结果正常互斥",
+        "triggerTexts": [
+          "检测结果正常-Xray"
+        ],
+        "targetTexts": [],
+        "direction": "both"
+      },
+      {
+        "id": "c-default-2",
+        "enabled": true,
+        "name": "（di）检测结果拆机互斥",
+        "triggerTexts": [
+          "检测结果拆机-Xray"
+        ],
+        "targetTexts": [],
+        "direction": "forward"
+      },
+      {
+        "id": "c-default-3",
+        "enabled": true,
+        "name": "（di）后壳样式与磁铁缺失互斥",
+        "triggerTexts": [
+          "后壳-样式不匹配-Xray"
+        ],
+        "targetTexts": [
+          "后壳-磁铁缺失"
+        ],
+        "direction": "forward"
+      },
+      {
+        "id": "c-default-4",
+        "enabled": true,
+        "name": "（di）问题项与XRAY检测结果正常互斥",
+        "triggerTexts": [
+          "Xray检测结果正常-Xray"
+        ],
+        "targetTexts": [],
+        "direction": "both"
+      },
+      {
+        "id": "c-default-5",
+        "enabled": true,
+        "name": "（di）屏幕IC与支架互斥",
+        "triggerTexts": [
+          "屏幕-IC样式或排线样式与样图不符"
+        ],
+        "targetTexts": [
+          "外屏-屏幕支架更换"
+        ],
+        "direction": "forward"
+      }
+    ],
+    "replaceRules": [
+      {
+        "id": "r-default-1",
+        "enabled": true,
+        "name": "（di）现象值",
+        "targetTexts": [
+          "成像异常-Xray",
+          "前摄像头-有焊接/锡焊异常-Xray",
+          "后摄像头-有焊接/锡焊异常-Xray",
+          "后壳-磁铁缺失-Xray",
+          "后壳-样式不匹配-Xray",
+          "电池维修-Xray",
+          "屏幕-IC样式或排线样式与样图不符-Xray",
+          "外屏-屏幕支架更换-Xray",
+          "主板或螺母柱断裂/缺失-Xray",
+          "主板-焊接飞线/屏蔽罩断裂缺失-Xray",
+          "部分零件维修更换-Xray",
+          "部分零件缺失-Xray",
+          "小内配缺失-Xray",
+          "屏幕-其他维修特征-Xray",
+          "后壳-其他维修特征-Xray",
+          "电池-第三方电池-Xray",
+          "电池-品牌电池-Xray",
+          "检测结果拆机-Xray",
+          "检测结果正常-Xray"
+        ],
+        "replaceTexts": [
+          "成像异常",
+          "前摄像头-有焊接/锡焊异常",
+          "后摄像头-有焊接/锡焊异常",
+          "后壳-磁铁缺失",
+          "后壳-样式不匹配",
+          "电池维修",
+          "屏幕-IC样式或排线样式与样图不符",
+          "外屏-屏幕支架更换",
+          "主板或螺母柱断裂/缺失",
+          "主板-焊接飞线/屏蔽罩断裂缺失",
+          "部分零件维修更换",
+          "部分零件缺失",
+          "小内配缺失",
+          "屏幕-其他维修特征",
+          "后壳-其他维修特征",
+          "电池-第三方电池",
+          "电池-品牌电池",
+          "检测结果拆机",
+          "检测结果正常"
+        ],
+        "fontSize": "16",
+        "textColor": "#000000"
+      },
+      {
+        "id": "r-default-2",
+        "enabled": true,
+        "name": "（di）有效质检",
+        "targetTexts": [
+          "电池-外挂小板/有飞线-Xray",
+          "主板-屏蔽罩、螺母柱、PCB板断裂/缺损-Xray",
+          "主板-焊接异常/有飞线-Xray",
+          "其他零部件维修更换-Xray",
+          "其他零部件缺失-Xray",
+          "安装辅件缺失(排线盖板/螺丝/弹片等）-Xray",
+          "Xray检测结果正常"
+        ],
+        "replaceTexts": [
+          "电池-外挂小板/有飞线",
+          "主板-屏蔽罩、螺母柱、PCB板断裂/缺损",
+          "主板-焊接异常/有飞线",
+          "其他零部件维修更换",
+          "其他零部件缺失",
+          "安装辅件缺失(排线盖板/螺丝/弹片等）",
+          "Xray检测结果正常"
+        ],
+        "fontSize": "16",
+        "textColor": "#000000"
+      }
+    ],
+    "settings": {
+      "toggleKey": "F1",
+      "checkDelay": 100,
+      "panelPos": null
+    }
+  }
+}
