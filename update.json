@@ -1,0 +1,6 @@
+{
+  "version": "1.4.61",
+  "updatedAt": "2026-10-27",
+  "note": "审图群模板复制提速 —— 以前不管模板用不用得上，都会先去请求一次任务信息（等网络回来才复制），所以按下去要顿一下。",
+  "url": "https://github.com/xiaziliang9-dev/X-ray-/releases/latest/download/xray-extension.zip"
+}
