@@ -6,27 +6,6 @@
   "rules": {
     "highlightRules": [
       {
-        "id": "h-default-1",
-        "enabled": true,
-        "name": "（di）特殊机型高亮拆机Xray",
-        "triggerTexts": [
-          "iPhone 14 Pro",
-          "iPhone 14 Pro Max",
-          "iPhone 15 Pro",
-          "iPhone 15 Pro Max",
-          "iPhone 16 Pro",
-          "iPhone 16 Pro Max",
-          "iPhone 17 Pro",
-          "iPhone 17 Pro Max"
-        ],
-        "targetTexts": [
-          "检测结果拆机-Xray"
-        ],
-        "bgColor": "#ffeb3b",
-        "textColor": "#d32f2f",
-        "bold": true
-      },
-      {
         "id": "h-default-2",
         "enabled": true,
         "name": "（di）商家纰漏电池高亮",
@@ -69,25 +48,6 @@
     ],
     "disableRules": [
       {
-        "id": "d-default-1",
-        "enabled": true,
-        "name": "（di）非特殊机型禁用拆机Xray",
-        "triggerTexts": [
-          "iPhone 14 Pro",
-          "iPhone 14 Pro Max",
-          "iPhone 15 Pro",
-          "iPhone 15 Pro Max",
-          "iPhone 16 Pro",
-          "iPhone 16 Pro Max",
-          "iPhone 17 Pro",
-          "iPhone 17 Pro Max"
-        ],
-        "targetTexts": [
-          "检测结果拆机-Xray"
-        ],
-        "disableMode": "notTriggered"
-      },
-      {
         "id": "d-default-2",
         "enabled": true,
         "name": "（di）苹果禁用屏幕其他样式特征",
@@ -98,7 +58,20 @@
           "屏幕-其他维修特征-Xray"
         ],
         "disableMode": "triggered"
-      }
+      },
+      "disableRules": [
+      {
+        "id": "d-default-3",
+        "enabled": true,
+        "name": "（di）商家披露禁用品牌电池",
+        "triggerTexts": [
+          "质检报告已选择",
+        ],
+        "targetTexts": [
+          "电池-品牌电池"
+        ],
+        "disableMode": "notTriggered"
+      },
     ],
     "checkRules": [
       {
@@ -110,16 +83,6 @@
         ],
         "targetTexts": [],
         "direction": "both"
-      },
-      {
-        "id": "c-default-2",
-        "enabled": true,
-        "name": "（di）检测结果拆机互斥",
-        "triggerTexts": [
-          "检测结果拆机-Xray"
-        ],
-        "targetTexts": [],
-        "direction": "forward"
       },
       {
         "id": "c-default-3",
