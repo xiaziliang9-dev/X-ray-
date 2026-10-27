@@ -69,7 +69,7 @@
         "targetTexts": [
           "电池-品牌电池"
         ],
-        "disableMode": "notTriggered"
+        "disableMode": "triggered"
       }
     ],
     "checkRules": [
