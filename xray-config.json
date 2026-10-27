@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "version": 1,
-  "updatedAt": "2026-09-26",
-  "note": "首版：与扩展内置默认规则一致",
+  "version": 2,
+  "updatedAt": "2026-10-27",
+  "note": "删掉 3 条与「拆机Xray」相关的规则（特殊机型高亮拆机 / 非特殊机型禁用拆机 / 检测结果拆机互斥）；新增「商家披露禁用品牌电池」（d-default-3）",
   "rules": {
     "highlightRules": [
       {
@@ -59,19 +59,18 @@
         ],
         "disableMode": "triggered"
       },
-      "disableRules": [
       {
         "id": "d-default-3",
         "enabled": true,
         "name": "（di）商家披露禁用品牌电池",
         "triggerTexts": [
-          "质检报告已选择",
+          "质检报告已选择"
         ],
         "targetTexts": [
           "电池-品牌电池"
         ],
         "disableMode": "notTriggered"
-      },
+      }
     ],
     "checkRules": [
       {
