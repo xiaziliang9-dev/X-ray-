@@ -2,11 +2,11 @@
   "schema": 1,
   "version": 3,
   "updatedAt": "2026-10-27",
-  "note": "删掉 3 条与「拆机Xray」相关的规则（特殊机型高亮拆机 / 非特殊机型禁用拆机 / 检测结果拆机互斥）；新增「商家披露禁用品牌电池」",
+  "note": "删掉 3 条与「拆机Xray」相关的规则（特殊机型高亮拆机 / 非特殊机型禁用拆机 / 检测结果拆机互斥）；新增(商家披露禁用品牌电池;手写笔正常和问题项互斥;耳机正常和问题项互斥）",
   "rules": {
     "highlightRules": [
       {
-        "id": "h-default-2",
+        "id": "h-default-1",
         "enabled": true,
         "name": "（di）商家纰漏电池高亮",
         "triggerTexts": [
@@ -21,7 +21,7 @@
         "bold": true
       },
       {
-        "id": "h-default-3",
+        "id": "h-default-2",
         "enabled": true,
         "name": "（di）14及以上系列后摄高亮",
         "triggerTexts": [
@@ -48,7 +48,7 @@
     ],
     "disableRules": [
       {
-        "id": "d-default-2",
+        "id": "d-default-1",
         "enabled": true,
         "name": "（di）苹果禁用屏幕其他样式特征",
         "triggerTexts": [
@@ -60,7 +60,7 @@
         "disableMode": "triggered"
       },
       {
-        "id": "d-default-3",
+        "id": "d-default-2",
         "enabled": true,
         "name": "（di）商家披露禁用品牌电池",
         "triggerTexts": [
@@ -84,7 +84,7 @@
         "direction": "both"
       },
       {
-        "id": "c-default-3",
+        "id": "c-default-2",
         "enabled": true,
         "name": "（di）后壳样式与磁铁缺失互斥",
         "triggerTexts": [
@@ -96,7 +96,7 @@
         "direction": "forward"
       },
       {
-        "id": "c-default-4",
+        "id": "c-default-3",
         "enabled": true,
         "name": "（di）问题项与XRAY检测结果正常互斥",
         "triggerTexts": [
@@ -105,8 +105,28 @@
         "targetTexts": [],
         "direction": "both"
       },
+       {
+        "id": "c-default-4",
+        "enabled": true,
+        "name": "（di）手写笔问题项与无以上问题互斥 ",
+        "triggerTexts": [
+          "无以上问题"
+        ],
+        "targetTexts": [],
+        "direction": "both"
+      },
       {
         "id": "c-default-5",
+        "enabled": true,
+        "name": "（di）耳机问题项 与 无 互斥",
+        "triggerTexts": [
+          "无"
+        ],
+        "targetTexts": [],
+        "direction": "both"
+      },
+      {
+        "id": "c-default-6",
         "enabled": true,
         "name": "（di）屏幕IC与支架互斥",
         "triggerTexts": [
